@@ -23,7 +23,7 @@ app.post('/values', (req, res) => {
             values.push(new Value({
                 value: v.value,
                 sensor: v.sensor,
-                time: v.time
+                time: Math.floor(new Date().getTime()/1000)
             }));
         });
 
